@@ -4,20 +4,21 @@
 </ol>
 
 <div class="container">
-<form>
-    
+<form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+    {{cliente.nome}}
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
                 <label>ID:</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" disabled="true" [ngModel]="cliente.id" name="id">
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
                 <label>Data Cadastro:</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" disabled="true" 
+                [ngModel]="cliente.dataCadastro" name="dataCadastro">
             </div>
         </div>
     </div>
@@ -26,14 +27,16 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>Nome: *</label>
-                <input type="text" class="form-control" value="{{cliente.nome}}">
+                <input type="text" class="form-control" 
+                [(ngModel)]="cliente.nome" name="nome">
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
                 <label>Cpf: *</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" 
+                [(ngModel)]="cliente.cpf" name="cpf">
             </div>
         </div>
     </div>   

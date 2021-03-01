@@ -11,6 +11,9 @@ export class ClienteFormComponent implements OnInit {
  
   cliente : Cliente = new Cliente();
 
+  sucesso: Boolean = false;
+
+
   constructor(private service: ClientesService) { 
     this.cliente = new Cliente();
   }
@@ -21,7 +24,7 @@ export class ClienteFormComponent implements OnInit {
   onSubmit(){
     this.service.salvar(this.cliente)
     .subscribe(response => {
-      console.log(response);
+      this.sucesso = true;
       }) 
     }
 

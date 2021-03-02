@@ -12,10 +12,12 @@ export class ClienteFormComponent implements OnInit {
   cliente : Cliente = new Cliente();
 
   sucesso: Boolean = false;
+  erros: String[] = [];
 
 
   constructor(private service: ClientesService) { 
     this.cliente = new Cliente();
+    
   }
  
   ngOnInit(): void {
@@ -25,7 +27,10 @@ export class ClienteFormComponent implements OnInit {
     this.service.salvar(this.cliente)
     .subscribe(response => {
       this.sucesso = true;
-      }) 
+      } , errorResponse => {  
+          this.erros =  errorResponse.error.erros;             
+        }
+      ) 
     }
 
 }

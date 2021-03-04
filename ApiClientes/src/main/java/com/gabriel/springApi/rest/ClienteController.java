@@ -1,5 +1,7 @@
 package com.gabriel.springApi.rest;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +44,12 @@ public class ClienteController {
 						() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente Não Encontrado"));
 		
 		
+	}
+	
+	@GetMapping
+	@ResponseStatus(HttpStatus.OK)
+	public List<Cliente> listarClientes() {		
+		return repository.findAll();						
 	}
 	
 	@DeleteMapping("{id}")

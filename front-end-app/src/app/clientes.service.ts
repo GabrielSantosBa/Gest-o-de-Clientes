@@ -15,13 +15,13 @@ export class ClientesService {
    salvar( cliente: Cliente) : Observable<Cliente>{
       return this.http.post<Cliente>('http://localhost:8080/api/clientes', cliente);
    }
+  
+   listarTodosClientes(): Observable<Cliente[]> {
+     return this.http.get<Cliente[]>('http://localhost:8080/api/clientes');
+   }
 
-
-
-  getCliente(){
-    let cliente: Cliente = new Cliente();
-    cliente.nome = "Gabriel Teste Service";
-    cliente.cpf="06632215521";
-    return cliente;
-  }
+   listarClientePorId(id: number): Observable<Cliente>{
+    return this.http.get<any>(`http://localhost:8080/api/clientes/${id}`);
+   }
+ 
 }

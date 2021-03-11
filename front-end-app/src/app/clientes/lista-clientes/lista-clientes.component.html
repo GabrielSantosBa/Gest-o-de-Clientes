@@ -29,10 +29,38 @@
                 <td>{{ cliente.nome }}</td>
                 <td>{{ cliente.cpf }}</td>
                 <td>{{ cliente.dataCadastro }}</td>
-                <td><i class="fa fa-edit"></i></td>
+                <td>
+                    <button routerLink="/cliente-form/{{ cliente.id }}">
+                        <i class="fa fa-edit"></i>                        
+                    </button>   
+                    <button class="btn btn-danger" (click)="preDeletarCliente(cliente)"
+                            data-toggle="modal" 
+                            data-target="#modalDeletar">
+                        <i class="fa fa-trash"></i>                       
+                    </button>                  
+                </td>
         </tr>
         </tbody>
     </table>
 
+        <div class="modal fade" id="modalDeletar" role="dialog" tabindex="-1">
+            
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Confirmação</h4>
+                    </div>
+                    <div class="modal-body" *ngIf="clienteSelecionado">
+                        {{clienteSelecionado.nome}}
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" (click)="deletarCliente()" data-dismiss="modal">Confirmar</button>
+                        <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
 </div>
+
 

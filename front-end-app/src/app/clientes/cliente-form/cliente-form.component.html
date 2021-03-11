@@ -1,6 +1,6 @@
 <h1 class="mt-4">Cliente</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Cadastrar</li>
+    <li class="breadcrumb-item active">{{ cliente.id ? 'Editar Cliente': 'Cadastrar' }}</li>
 </ol>
 
 <div class="container">
@@ -52,6 +52,14 @@
         </div>
     </div>   
     
-    <button type="submit" class="btn btn-primary mb-2"> <i class="fa fa-save"></i> Cadastrar</button>
+    <button type="submit" class="btn btn-primary mb-2" *ngIf="!cliente.id"> 
+        <i class="fa fa-save"></i> Cadastrar
+    </button>
+    <button type="submit" class="btn btn-primary mb-2 ml-2"> 
+        <i class="fa fa-save"></i> Voltar
+    </button>
+    <button type="submit" class="btn btn-primary mb-2 ml-2" *ngIf="cliente.id">
+         <i class="fa fa-save"></i> Atualizar
+    </button>
   </form>
 </div>

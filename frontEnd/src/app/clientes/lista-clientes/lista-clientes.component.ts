@@ -12,8 +12,8 @@ import { Cliente } from '../Cliente';
 })
 export class ListaClientesComponent implements OnInit {
 
-clientes?: Cliente[];
-clienteSelecionado?: Cliente[];
+clientes: Cliente[] = [];
+clienteSelecionado?: Cliente;
 msgSucesso?: String;
 msgErro?: String;
 
@@ -30,14 +30,19 @@ msgErro?: String;
   }
 
   preDeletarCliente(cliente: Cliente){
-    this.clienteSelecionado = cliente;
+      this.clienteSelecionado = cliente;    
   }
 
   deletarCliente(){
     this.service
-    .deletar(this.clienteSelecionado).subscribe(response => this.msgSucesso = "Cliente Deletado com Sucesso!",
-    erroResponse => this.msgErro = "Erro ao Deletar cliente"
-    )
+      .deletar(this.clienteSelecionado)
+      .subscribe( 
+        response => {
+          this.msgSucesso = 'Cliente deletado com sucesso!'
+          this.ngOnInit();
+        },
+        erro => this.msgErro = 'Ocorreu um erro ao deletar o cliente.'  
+      )
   }
 
 }

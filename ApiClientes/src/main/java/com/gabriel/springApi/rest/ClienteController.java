@@ -31,25 +31,25 @@ public class ClienteController {
 
 	
 	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
-	public Cliente salvar(@RequestBody @Valid Cliente cliente) {
-		return repository.save(cliente);
+	@ResponseStatus(HttpStatus.CREATED)//Retorna Http 201 ok 
+	public Cliente salvar(@RequestBody @Valid Cliente cliente) { //Objeto validado, request passada no Body 		
+			return repository.save(cliente);			
 	}
 	
 	@GetMapping("{id}")
-	@ResponseStatus(HttpStatus.OK)
-	public Cliente get(@PathVariable Integer id) {
+	@ResponseStatus(HttpStatus.OK)//Retorna Http 200 Sucesso
+	public Cliente get(@PathVariable Integer id) {//Variavel na URL 
 		return  repository.findById(id)
 				.orElseThrow( 
-						() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente Não Encontrado"));
-		
-		
+						() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Usuario Não Encontrado"));
+						//Caso ocorram erros, Exception lançada na resposta informando http 400.
+				
 	}
 	
 	@GetMapping
 	@ResponseStatus(HttpStatus.OK)
 	public List<Cliente> listarClientes() {		
-		return repository.findAll();						
+			return repository.findAll();		
 	}
 	
 	@DeleteMapping("{id}")

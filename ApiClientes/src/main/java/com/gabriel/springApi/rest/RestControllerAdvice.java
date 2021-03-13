@@ -29,6 +29,7 @@ public class RestControllerAdvice {
 		return new ApiErros(messages);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@ExceptionHandler(ResponseStatusException.class)
 	public ResponseEntity handleResponseStatusException(ResponseStatusException ex) {
 		

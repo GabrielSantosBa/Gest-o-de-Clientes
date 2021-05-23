@@ -25,7 +25,7 @@ O **GestãoDeClientes** e um projeto bem legal onde pude aprender bastante sobre
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 * [Spring - Framework Java](https://docs.spring.io/spring-framework/docs/current/reference/html/)
-* [Angular - um framework JavaScript ](https://angular.io/)
+* [Angular - um framework JavaScript - Vers 9 ](https://angular.io/)
 * [Bootstrap - Framework CSS](https://getbootstrap.com/)
 * [PostgreSQL - Banco De Dados Relacional](https://www.postgresql.org/)
 * [JDK Oracle - Kit de Desenvolvimento Java- Vers 1.8](https://www.oracle.com/br/java/technologies/javase-downloads.html)

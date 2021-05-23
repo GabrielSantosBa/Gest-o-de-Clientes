@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://github.com/GabrielSantosBa/Gest-o-de-Clientes/blob/master/angular_spring.png">
+    <img src="https://github.com/GabrielSantosBa/Gest-o-de-Clientes/blob/master/angular_spring.png" width="20%" height="20%">
 </h1>
 
 <h1 align="center">

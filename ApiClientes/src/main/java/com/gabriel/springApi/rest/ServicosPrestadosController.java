@@ -32,14 +32,14 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ServicosPrestadosController {
 	
-	 private final ClienteRepository clienteRepository;
+	 	private final ClienteRepository clienteRepository;
 	    private final ServicoPrestadoRepository repository;
 	    private final BigDecimalConverter bigDecimalConverter;
 
 	    @PostMapping
 	    @ResponseStatus(HttpStatus.CREATED)
 	    public ServicoPrestado salvar( @RequestBody @Valid ServicoPrestadoDto dto ){
-	        LocalDate data = LocalDate.parse(dto.getData(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+	        LocalDate data = LocalDate.parse(dto.getData(), DateTimeFormatter.ofPattern("dd/MM/yy"));
 	        Integer idCliente = dto.getIdCliente();
 
 	        Cliente cliente =

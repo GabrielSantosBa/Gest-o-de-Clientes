@@ -1,27 +1,62 @@
-# FrontEndApp
+<h1 align="center">
+    <img src="https://github.com/GabrielSantosBa/Dash-Board-Vendas/blob/master/frontend/src/assets/img/ds-dark.svg">
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+<h1 align="center">
+    <img src="https://github.com/GabrielSantosBa/Dash-Board-Vendas/blob/master/Ds_Vendas.gif">
+</h1>
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Indice
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* [Sobre](#-sobre)
+* [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+* [Como baixar o projeto](#-Como-baixar-e-usar-o-projeto)
 
-## Build
+## 🔖&nbsp; Sobre
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+O **DashVendas** e uma aplicação que consiste em exibir um dashboard a partir de dados fornecidos por um back end construído com Spring Boot.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚀 Tecnologias utilizadas
 
-## Running end-to-end tests
+O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* [Spring - Framework Java](https://docs.spring.io/spring-framework/docs/current/reference/html/)
+* [React - biblioteca JavaScript declarativa](https://pt-br.reactjs.org/)
+* [Bootstrap - Framework CSS](https://getbootstrap.com/)
+* [PostgreSQL - Banco De Dados Relacional](https://www.postgresql.org/)
+* [Heroku - PaaS, Plataforma como serviço](https://devcenter.heroku.com/categories/reference)
+* [JDK Oracle - Kit de Desenvolvimento Java- Vers 1.8](https://www.oracle.com/br/java/technologies/javase-downloads.html)
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<!--* 🗂 Como baixar e usar o projeto*-->
+
+<!--### 📋 Pré-requisitos-->
+
+<!--* [Ambiente de Desenvovlimeno que Interprete o PHP(Nesse projeto foi o XAMPP)] (https://www.apachefriends.org/download.html)
+* [Base De Dados] (https://drive.google.com/file/d/1Dx67MSc60ycNSXdOzUuJ7QRiwmUB8cii/view?usp=sharing)-->
+
+<!--### 🔧 Instalação-->
+
+<!--```bash
+    # Clonar o repositório
+    $ git clone https://github.com/GabrielSantosBa/Site-NaCaatinga.git    
+```
+### 🤔 Como Instalar e adicionar o Projeto ao XAMPP
+
+* [Instalação e Configuração] (https://www.hostinger.com.br/tutoriais/como-usar-o-xampp/)
+ 
+* [Em posse da Base de dados e o XAMPP devidamente iniciado basta digitar no seu browser] (http://localhost/phpmyadmin)
+ 
+* [Após acessar o PhpMyAdmin Basta importar o BD, exemplo abaixo] - [Exemplo](https://ik.imagekit.io/n07nbjzer4n/php-myadmin_wIHbnjVYJ.png)-->
+ 
+
+
+<!-- --- -->
+<!--<i>Ele disponibilizou a base de dados, vou Hackear... Nem Perca seu tempo eu já troquei todos os dados de acesso! hahaha</>-->
+
+Desenvolvido com 💜 por Gabriel Santos
